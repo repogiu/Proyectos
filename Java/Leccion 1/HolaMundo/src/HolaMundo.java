@@ -11,53 +11,67 @@ public class HolaMundo {
     public static void main(String args[]){
        /* System.out.println("Hola Mundo desde Java");
         
-         int miVariable = 10;
-         System.out.println(miVariable);
-         miVariable = 5;
-         System.out.println(miVariable);
-         
-         String miVariableCadena = "Bienvenidos";
+        // Reutilizacion de variables
+         int miVariable = 10; //Camel Case 
+         System.out.println(miVariable); // para no escribir todo: mi espacio
+         miVariable = 5; //reutilizacion de variable sin int
+         System.out.println(miVariable);// por consola nos muestra el valor de la variable (5)
+        
+        //Tipo string (no primitivo, es una clase)
+        // para definir String como objeto, lo escribimos asi pero asi no es asi
+        // String miVariableCadena = new String ("Bienvenidos");
+         String miVariableCadena = "Bienvenidos"; // empieza con S mayusculas
          System.out.println(miVariableCadena);
-         miVariableCadena = "Sigamos creciendo en programaciÃ³n";
+        
+        //Reutilizacion de string
+         miVariableCadena = "Sigamos creciendo en programacion";
          System.out.println(miVariableCadena);
         */
        //Var - inferencia de tipos en Java
         /* var miVariableEntera2 = 10;
          var miVariableCadena2 = "Seguimos estudiando";
          System.out.println("miVariableCadena2 = " + miVariableCadena2);
+       // nos muestra por pantalla miVariableCadena2 = Seguimos estudiando
      
          //soutv + tab
          //Para ejecutar Shift + F6 es la tecla para mayuscula
-         //Reglas para definir una variable en Java
+                  
          
-         //var miVariableEjemplo = 45;
-         //concatenar
+         //Ejercicio de concatenacion
          var usuario = "Osvaldo";
          var titulo = "Ingeniero";
-         var union = titulo + usuario;
-         System.out.println("union = " + union);
+         var union = titulo + " " + usuario;
+       
+         System.out.println("union = " + union); //imprime por pantalla Ingeniero Osvaldo
          
          var a = 8;
          var b = 4;
-         System.out.println(usuario + a + b);
-         
+         // evalua la expresion de izq a derecha (contexto de cadena)
+         System.out.println(a + b); //imprime 12, primero encuentra una variable tipo entera
+         System.out.println(usuario + a + b); // imprime Osvaldo84, primero encuentra una variable tipo cadena
+         System.out.println(usuario + (a + b)); //imprime Osvaldo 12, cambia la prioridad por los parentesis, concatena la suma con la cadena
+       
          //Ejercicio: Caracteres especiales con Java
          var nombre = "Natalia";
-         System.out.println("Nueva linea: \n"+nombre);
-         System.out.println("Tabulador: \t"+nombre);
-         System.out.println("\t.:MENÚ:.");
-         System.out.println("Retroseso: \b"+nombre);
-         System.out.println("Comillas simples: \'"+nombre+"'");
+         System.out.println("\nNueva linea: \n"+nombre)//imprime un salto de linea entre Natalia y Nueva Linea
+         System.out.println("Nueva linea: \n"+nombre); //imprime Nueva linea: (salto de linea) Natalia
+         System.out.println("Tabulador: \t"+nombre);   //imprime Tabulador:    Natalia
+         System.out.println("\t.:MENÚ:."); //imprime (espacio) .:MENU:.
+         System.out.println("\t\t.:MENÚ:."); // el doble de espacio
+       
+         //Caracter de retroceso
+         System.out.println("Retroseso: \b"+nombre); // quita un espacio a la izquierda
+         System.out.println("Comillas simples: \'"+nombre+"'"); //imprime: Comillas simples: 'Natalia'
          System.out.println("Comillas Dobles: \""+nombre+"\"");*/
-        
-         //Clase Scanner
-         /*Scanner entrada = new Scanner(System.in);
+         
+         //Clase Scanner; crea un objeto llamado entrada
+         /*Scanner entrada = new Scanner(System.in); // inicializa la clase scanner, esta en otro paquete
          System.out.println("Digite su nombre: ");
-         var usuario2 = entrada.nextLine();
+         var usuario2 = entrada.nextLine(); //metodo tipo string, le pedimos al usuario que nos ingrese un valor a esa variable
          System.out.println("usuario2 = " + usuario2);
-         System.out.println("Escriba el titulo: ");
+         System.out.println("Escriba el titulo: "); 
          var titulo2 = entrada.nextLine();
-         System.out.println("Resultado: "+titulo2+" "+usuario2);*/
+         System.out.println("Resultado: "+titulo2+" "+usuario2); // imprime Resultado: Profesor Ariel*/
         
          //Ejercicio libro
          /*Scanner scanner = new Scanner(System.in);
@@ -69,31 +83,37 @@ public class HolaMundo {
          System.out.println(titulo + " fue escrito por " + autor);*/
         
          //Tipos primitivos
-         /*byte numEnteroByte = 10;
-         System.out.println("Valor minimo Byte: "+ Byte.MIN_VALUE);
-          System.out.println("Valor maximo Byte: "+ Byte.MAX_VALUE);
+         /*byte numEnteroByte = 10; // el 10 es una literal de tipo byte
+         byte numEnteroByte = (byte)129; //conversion de tipo (permite almacenar un numero mayor al rango permitido) // imprimte -127, a eso se lo denomina perdida de precision 
+         System.out.println("Valor minimo Byte: "+ Byte.MIN_VALUE); //imprime -128
+         System.out.println("Valor maximo Byte: "+ Byte.MAX_VALUE); // imprime 127
      
          short numEnteroShort = 23455;
+         short numEnteroShort = (short)32768;
          System.out.println("Numero entero short:"+ numEnteroShort);
          System.out.println("Valor mínimo del short:"+ Short.MIN_VALUE);
          System.out.println("Valor máximo del short:"+ Short.MAX_VALUE);
          
          int numEnteroInt = 982465823;
+         int numEnteroInt = (int)2147483648L; // se  agrega L o l al final, imprime el numero en negativo
          System.out.println("Número entero int:"+ numEnteroInt);
          System.out.println("Valor mínimo del int:"+ Integer.MIN_VALUE);
          System.out.println("Valor máximo del int:"+ Integer.MAX_VALUE);
          
          long numEnteroLong = 10;
+         long numEnteroLong = 9223372036854775807L; // siempre hay que agregar la L al final porque Java por defoult siempre asigna  los numeros enteros a un tipo de dato int.
          System.out.println("Número entero long:"+ numEnteroLong);
          System.out.println("Valor mínimo del long"+ Long.MIN_VALUE);
-         System.out.println("Valor máximo del long"+ Long.MAX_VALUE);
+         System.out.println("Valor máximo del long" + Long.MAX_VALUE);
          
-         float numFloat = 2.23239784565F;
+         float numFloat = 2.23239784565F; // siempre se agrega una F(recomendado) o f al final
+         float numFloat = (float)2.23239784565; //conversion a float porque por default los tipos flotantes son de tipo double
+         float numFloat = (float)3.4025236E38; // imprime Infinity, el complilador no lo puede interpretar
          System.out.println("Número float:"+ numEnteroLong);
          System.out.println("Valor mínimo del float"+ Float.MIN_VALUE);
          System.out.println("Valor máximo del float"+ Float.MAX_VALUE);
          
-         double numDouble = 1.7235825138599289347727D;
+         double numDouble = 1.7235825138599289347727D; // no hace falta poner la D
          System.out.println("Número double:"+ numEnteroLong);
          System.out.println("Valor mínimo del double"+ Double.MIN_VALUE);
          System.out.println("Valor máximo del double"+ Double.MAX_VALUE);*/
@@ -107,32 +127,37 @@ public class HolaMundo {
          System.out.println("numDouble = " + numDouble);*/
     
          //Tipos primitivos parte 2
-         /*char miVariableChar ='a';
+         /*char miVariableChar ='a'; // imprime mi VariableChar = a
          System.out.println("miVariableChar: " + miVariableChar);
-         
-         char varCaracter = '\u0024';
+         // codigo unicode
+         char varCaracter = '\u0024'; // imprime simbolo dolar
          System.out.println("varCaracter = " + varCaracter);
+         // sistemas decimal
          char vaCaracterDecimal = 36;
          System.out.println("vaCaracterDecimal = " + vaCaracterDecimal);
          char varCaracterSimbolo = '$';
          System.out.println("varCaracterSimbolo = " + varCaracterSimbolo);
         
+         //Inferencia de tipo char
          var varCaracter1 = '\u0024';
          System.out.println("varCaracter1 = " + varCaracter);
-         var vaCaracterDecimal1 = (char)36;
+         var vaCaracterDecimal1 = (char)36; // hacer conversion para que el compilador lo reconozca como char y no como entero
          System.out.println("vaCavarEnteroCharracterDecimal1 = " + vaCaracterDecimal);
          var varCaracterSimbolo1 = '$';
          System.out.println("varCaracterSimbolo1 = " + varCaracterSimbolo);
          
-         int varEnteroChar = '$';
+         //Conversion de un tipo char a int
+         int varEnteroChar = '$'; //imprime 36
          System.out.println("varEnteroChar = " + varEnteroChar);*/
     
     
          // tIPOS BOOLEANOS O BANDERA
         /* boolean varBool = true;
+         var varBool = true;
          System.out.println("varBool = " + varBool);
-    
-         if(varBool){
+         
+         // SENTENCIA IF
+         if(varBool){  // poner(varBool==true) es redundante, es un codigo duro
          System.out.println("la bandera es verde");
          } 
          else {
@@ -149,27 +174,28 @@ public class HolaMundo {
          } */
         
          // CONVERSION DE TIPOS PRIMITIVOS
-         /*var edad = Integer.parseInt("20");
-         System.out.println("edad = " + (edad + 1));
+         /*var edad = Integer.parseInt("20"); //utilizamos la clase Integer y su metoco parseInt, que convierte una cadena a entero
+         System.out.println("edad = " + (edad + 1)); // imprime 20, 21
          var valorPI = Double.parseDouble ("3.1416");
          System.out.println("valorPI = " + valorPI);*/
-         
-         //Pedir un valor
-         //var entrada = new Scanner(System.in);
+          
+         //Pedir un valor con la clase scanner y su metodo nextLine
+         //var entrada = new Scanner(System.in); //inicializamos la clase scanner con su objeto entrada
          /*System.out.println("Digite su edad:");
-         edad = Integer.parseInt (entrada.nextLine());
+         edad = Integer.parseInt (entrada.nextLine()); // conversion del dato provisto por el usuario a tipo entero
          System.out.println("edad = " + edad); */
          
-         //Conversion de tipos primitivos 2
+         //Conversion de un tipo de dato entero a string
          
          /*var edadTexto = String.valueOf(10);
-         System.out.println("edadTexto = " + edadTexto);
+         System.out.println("edadTexto = " + edadTexto); // imprime 10 pero es una cadena
         
-         var fraseChar = "programadores".charAt(10);
-         System.out.println("fraseChar:" + fraseChar);
+         //Recuperar un caracter de una cadena utilizando el metodo charAt
+         var fraseChar = "programadores".charAt(10); // si nos salimos del indice tendremos una excepcion
+         System.out.println("fraseChar:" + fraseChar);// si ingresamos desarrolladores me imprime fraseChar: d
          
          System.out.println ("Digite un caracter: ");
-         fraseChar = entrada.nextLine().charAt(0);
+         fraseChar = entrada.nextLine().charAt(0); // el error se corrige utilizando el metodo charAt porque no podemos corregir un string a char porque el compilador ya a detectado
          System.out.println("fraseChar = " + fraseChar);*/
          
          /*int num1=5, num2=4;
@@ -319,7 +345,7 @@ public class HolaMundo {
         var z = ++x + y--;
         System.out.println("x = " + x);//6
         System.out.println("y = " + y);//9
-        System.out.println("z = " + z);//16
+        Sy stem.out.println("z = " + z);//16
         
         var solucionAritmetica = 4 + 5 * 6 / 3;// 4 + ((5 * 6) / 3) = 30 / 3 = 10 + 4 =
         System.out.println("solucionAritmetica = " + solucionAritmetica);
