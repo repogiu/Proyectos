@@ -192,12 +192,14 @@ public class HolaMundo {
         
          //Recuperar un caracter de una cadena utilizando el metodo charAt
          var fraseChar = "programadores".charAt(10); // si nos salimos del indice tendremos una excepcion
-         System.out.println("fraseChar:" + fraseChar);// si ingresamos desarrolladores me imprime fraseChar: d
+         System.out.println("fraseChar:" + fraseChar);// si ingresamos desarrolladores me imprime fraseChar: d, podemos ingresar un numero porque la clase scanner es string
          
          System.out.println ("Digite un caracter: ");
          fraseChar = entrada.nextLine().charAt(0); // el error se corrige utilizando el metodo charAt porque no podemos corregir un string a char porque el compilador ya a detectado
          System.out.println("fraseChar = " + fraseChar);*/
          
+         // Inicializar multiples variables (no aplica a la inferencia de tipo var)
+         // Operadores aritmeticos
          /*int num1=5, num2=4;
          var solucion = num1 + num2;
          System.out.println("solución suma = " + solucion);
@@ -205,30 +207,35 @@ public class HolaMundo {
          solucion = num1 - num2;
          System.out.println("solución resta = " + solucion);
         
-         solucion = num1 * num2;
+         solucion = num1 * num2; // el rdo es entero
          System.out.println("solución multiplicación = " + solucion);
         
-         solucion = num1 / num2;
+         solucion = num1 / num2; // el rdo es entero
          System.out.println("solución división = " + solucion);
         
-         var solucion2 = 3.4 / num2;
+         var solucion2 = 3.4 / num2; // le asigna un tipo double
          System.out.println("resultado de la división = " + solucion2);
-         //no es lo mismo flotanto que float(q es algo de java)
+         //no es lo mismo flotante que float(q es algo de java)
         
+        // Residuo o modulo de la division.
          solucion = num1 % num2;//Guarda el residuo entero de la división
-         System.out.println("solucion = " + solucion);
+         System.out.println("solucion residuo = " + solucion);
          
-         if (num1 % 2 == 0) 
+         //Algoritmo par o impar, con residuo igual a 0
+         Con una sola linea de codigo dentro del bloque if- else no hace falta llaves
+         if (num1 % 2 == 0) // si el residuo es 0 el numero es par.
              System.out.println("Es un número par");
-         else
+         else 
              System.out.println("Es un número impar");*/
         
+         //Operadores de asignacion
         /* int varNum1 = 1, varNum2 = 4;
-         int varNum3 = varNum1 + 6 - varNum2;
+         int varNum3 = varNum1 + 6 - varNum2; //los operadores suma y resta tiene la misma prioridad, por lo tanto la ejecucion de hara de izq a derecha del signo de asignacion
          System.out.println("varNum3 = " + varNum3);
         
-         varNum1 += 1; // varNum1= varNum1 + 1; operador de composición
-         System.out.println("varNum1 = " + varNum1);
+         //Operador de composicion (asignacion)
+         varNum1 += 1;  //  es lo mismo que escribir varNum1= varNum1 + 1; 
+         System.out.println("varNum1 = " + varNum1); // ahora varNum1 vale 2, porque antes valia 1
         
          varNum2 -= 1;
          System.out.println("varNum2 = " + varNum2);
@@ -258,52 +265,56 @@ public class HolaMundo {
         var varE = 9;//Se va a modificar su valor
         var varF = ++varE;//Simbolo antes de la variable
         //Primero se incrementa la variable y luego se usa su valor
-        System.out.println("varE = " + varE);//Se incrementa en la variable
-        System.out.println("varF = " + varF);//Va a sumar uno
+        System.out.println("varE = " + varE);//Se incrementa en la variable E tbm en una unidad, vale 10
+        System.out.println("varF = " + varF);//Va a sumar uno, vale 10 tbm
                 
         //Postincremento (el simbolo va despues de la variable)
         var varG = 3;
         var varH = varG++;//Primero el valor de la variable, luego el incremento
-        System.out.println("varG = " + varG);
-        System.out.println("varH = " + varH);
+        System.out.println("varG = " + varG); // vale 4
+        System.out.println("varH = " + varH); // vale 3, no llego a asignar la suma de unidad
         
         //Operadores unarios de decremento: Predecremento
         var varI = 4;
         var varJ = --varI;
-        System.out.println("varI = " + varI);//La variable I ya esta con decremento
-        System.out.println("varJ = " + varJ);
+        System.out.println("varI = " + varI);//La variable I ya esta con decremento, vale 3
+        System.out.println("varJ = " + varJ); // vale 3
         
         //Postdecremento
         var varK = 8;
-        var varL = varK--;//Primero el valor de la varible, luego queda el decremento
-        System.out.println("varK = " + varK);//Aqui va a decrementar en 1
-        System.out.println("varL = " + varL);
+        var varL = varK--;//Primero el valor de la variable, luego queda el decremento
+        System.out.println("varK = " + varK);//Aqui va a decrementar en 1, vale 7
+        System.out.println("varL = " + varL); // vale 8
         
         //Operadores de igualdad y relacionales
         var aNum = 5;
         var bNum = 4;
         var cNum = (aNum ==bNum);//Nos regresa un valor booleano: true o folse - Los parentesis son opcionales
-        System.out.println("cNum = " + cNum);
-        var dNum = aNum != bNum;//Nos regresa un valor booleano: true o folse
+        System.out.println("cNum = " + cNum); // regresa false
+        
+         var dNum = aNum != bNum; 
         System.out.println("dNum = " + dNum);
+        
         var cadenaA = "Hello";
         var cadenaB = "Hello";
-        var cVar = cadenaA == cadenaB;//No hace una comparacion de lo que hay adentro, sino que de las referencias de objetos
+        var cVar = cadenaA == cadenaB;// compara referencias no el contenido de la variable. No hace una comparacion de lo que hay adentro, sino que de las referencias de objetos
         System.out.println("cVar = " + cVar);
-        var fVar = cadenaA.equals(cadenaB);//Aca si hace la comparacion de lo que tiene guardadado dentro de las variables string
+        
+        var fVar = cadenaA.equals(cadenaB);//Aca si hace la comparacion de lo que tiene guardadado dentro de las variables
         System.out.println("fVar = " + fVar);
         
-        //Operadores relacionales
-        var gVar = aNum >= bNum;//< <= > >= == !=
+        //Operadores relacionales //< <= > >= == !=
+        var gVar = aNum >= bNum; // los parentesis son opcionales
         System.out.println("gVar = " + gVar);
-        //Se puede poneer parentesis o no
-        
+         
+        //es aconsejable siempre usar llaves 
         if(aNum % 2 == 0){
             System.out.println("El numero es par");
         }else{
             System.out.println("El numero es impar");
         }//Es aconsejable utilizar las llaves para evitar que se rompa el codigo
-        
+         
+         // Algoritmo mayor de edad
         var edad = 30;
         var adulto = 18;
         if(edad >= adulto){
@@ -311,20 +322,24 @@ public class HolaMundo {
         }else{
             System.out.println("Es menor de edad");
         }*/
+        
+        
         //Operadores condicionales: And
         /*var valorA = 7;
         var valorMinimo = 0;//Rango del 0 al 10
         var valorMaximo = 0;
         var respuesta = valorA >= 0 && valorA <= 10;
-
+        
+        //Algoritmo rango
         if (respuesta) {
             System.out.println("Esta dentro del rango establecido");
         } else {
             System.out.println("Esta fuera del rango establecido");
         }
         //Operador Or
+        // Algoritmo para asistir evento
         var vacaciones = false;
-        var diaLibre = true;
+        var diaLibre = false;
         if (vacaciones || diaLibre) {
             System.out.println("El papa puede asistir al juego de su hijo");
         } else {
@@ -335,41 +350,40 @@ public class HolaMundo {
         /*var resultadoT = (5 > 8) ? "Verdadero" : "Falso";
         System.out.println("resultadoT = " + resultadoT);
         
+        //Ejercicio par e impar (el operador ternario simplifica el if-else)
         var numeroT = 4;
-        resultadoT = (numeroT % 2 == 0) ? "Es par" : "Es impar";
+        resultadoT = (numeroT % 2 == 0) ? "Es par" : "Es impar"; // se reutiliza la variable resultadoT
         System.out.println("resultadoT = " + resultadoT);*/
         
-        //Prioridad de los operadores
-        var x = 5;
+        //Prioridad de los operadores (las expresiones se evaluan de izq a derecha)
+        /*var x = 5;
         var y = 10;
         var z = ++x + y--;
         System.out.println("x = " + x);//6
         System.out.println("y = " + y);//9
-        Sy stem.out.println("z = " + z);//16
+        System.out.println("z = " + z);//16, primero le suma 1 a x, luego evalua la expresion y que vale 10 y lo suma a 6 y luego le esta en una unidad la variable y
         
-        var solucionAritmetica = 4 + 5 * 6 / 3;// 4 + ((5 * 6) / 3) = 30 / 3 = 10 + 4 =
+        var solucionAritmetica = 4 + 5 * 6 / 3;// primero multiplica 5*6 y luego lo dividi en 3, y luego le suma 4. 4 + ((5 * 6) / 3) = 30 / 3 = 10 + 4 = 14
         System.out.println("solucionAritmetica = " + solucionAritmetica);
         
+        //Uso de parentesis
         solucionAritmetica = (4+5) * 6 / 3;// 4 + 5 = 9 * 6 = 54 / 3 = 18
-        System.out.println("solucionAritmetica = " + solucionAritmetica);
-    
-    
-    
-    
-    
-  
+        System.out.println("solucionAritmetica = " + solucionAritmetica);*/
         
+        // Calcular el area y perimetro de un rectangulo
+        var base = 4;
+        var altura = 2;
+        var area = base * altura;
+        var perimetro = 2 * (area);
+        System.out.println("El area del rectangulo es = " + area);
+        System.out.println("El perimetro del rectangulo es = " + perimetro);
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        //Algoritmo mayor de dos numeros
+        var num1 = 4;
+        var num2 = 6;
+        var numMayor = (num1 > num2) ? "es mayor" : "es menor";
+        System.out.println("numMayor = " + numMayor);
+                
     }
     
 }

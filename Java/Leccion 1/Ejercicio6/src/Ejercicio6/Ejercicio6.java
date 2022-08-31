@@ -1,3 +1,7 @@
+//Guillermo tiene N dolares. 
+//Luis tiene la mitad de lo que posee Guillermo.
+//Juan tiene la mitad de lo que poseen Luis y Guillermo juntos.
+//Hacer un programa que calcule e imprima la cantidad de dinero que tienen entre los tres.
 package Ejercicio6;
 
 import java.util.Scanner;
@@ -12,9 +16,9 @@ public class Ejercicio6 {
        dLuis = dGuillermo / 2;
        dJuan = (dGuillermo + dLuis) / 2;
        dTotal = dGuillermo + dLuis + dJuan;
-        System.out.println("El total de dolares es: "+dTotal);
-        System.out.println("El total de dolares de Luis es: "+dLuis);
-        System.out.println("El total de dolares de Juan es: "+dJuan);
+        System.out.println("\nEl total de dolares es: US$ "+dTotal);
+        System.out.println("El total de dolares de Luis es: US$ "+dLuis);
+        System.out.println("El total de dolares de Juan es: US$ "+dJuan);
        
        
        
