@@ -1,3 +1,4 @@
+<!--Hacer un programa que muestre un mensaje. Ilustre como incrustar codigo PHP en un doc HTML y como imprimir desde php -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
