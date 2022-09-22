@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=Pagina, initial-scale=1.0" />
+    <title>Pagina web con bootstrap</title>
+    <link
+      rel="stylesheet"
+      href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <!--Menu con navrbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark"style="background-color: #00264d;" >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="logo.png" alt="infinito" width="150px" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarScroll"
+          aria-controls="navbarScroll"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+          <ul
+            class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+            style="--bs-scroll-height: 100px"
+          >
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sobre Nosotros</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Productos
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Producto 1</a></li>
+                <li><a class="dropdown-item" href="#">Producto 2</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Producto 3</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contacto</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Elegi un lugar" aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Buscar
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!--Slider o carrusel -->
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="slide.jfif" class="d-block w-100" alt="">
+        </div>
+        <div class="carousel-item">
+          <img src="slide2.jfif" class="d-block w-100" alt="">
+        </div>
+        <div class="carousel-item">
+          <img src="slide3.jfif" class="d-block w-100" alt="">
+        </div>
+      </div>
+    </div>
+
+    <!--Container 
+    <div class="container-lg bg-primary">
+      <div class="row">
+        <div class="col-lg-6">1</div>
+        <div class="col-lg-6">2</div>
+      </div>
+      <div class="row">
+        <div class="col-lg-9">3</div>
+        <div class="col-lg-3">4</div>
+      </div>
+    </div> -->
+
+    
+    
+    <!--Cards -->
+    <div class="container-md p-5 text-white w-100" style="background-color: #00264d;">
+      <div class="row pt-5">
+        <h1 class="text-center pb-5">Cuidades</h1>
+      <!--Card1 -->
+      <div class="row">
+        <div class="col-md">
+          <div class="card w-100 " style="width: 18rem;">
+            <img src="card.jpg" class="card-img-top" alt="">
+            <div class="card-body">
+              <h5 class="card-title text-dark">Patagonia Argentina</h5>
+              <p class="card-text text-dark">En octubre se organizan visitas guiadas a los campos cercanos a Trevelin y Esquel, en Chubut.</p>
+              <a href="https://argentear.com/tulipanes-patagonia/" class="btn btn-primary ">Mas info</a>
+            </div>
+          </div>
+        </div>
+
+        <!--Card2 -->
+        <div class="col-md">
+          <div class="card w-100 ">
+            <img src="card.jpg" class="card-img-top" alt="">
+            <div class="card-body">
+              <h5 class="card-title text-dark">Patagonia Argentina</h5>
+              <p class="card-text text-dark">En octubre se organizan visitas guiadas a los campos cercanos a Trevelin y Esquel, en Chubut.</p>
+              <a href="https://argentear.com/tulipanes-patagonia/" class="btn btn-primary">Mas info</a>
+            </div>
+          </div>
+        </div>
+
+         <!--Card3 -->
+         <div class="col-md">
+          <div class="card w-100 " style="width: 18rem;">
+            <img src="card.jpg" class="card-img-top" alt="">
+            <div class="card-body">
+              <h5 class="card-title text-dark">Patagonia Argentina</h5>
+              <p class="card-text text-dark">En octubre se organizan visitas guiadas a los campos cercanos a Trevelin y Esquel, en Chubut.</p>
+              <a href="https://argentear.com/tulipanes-patagonia/" class="btn btn-primary">Mas info</a>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+      </div>
+     </div>
+
+
+
+    
+    
+
+ 
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
