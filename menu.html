@@ -34,14 +34,14 @@
             style="--bs-scroll-height: 100px"
           >
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+              <a class="nav-link active fs-5" aria-current="page" href="#">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Sobre Nosotros</a>
+              <a class="nav-link fs-5" href="#">Sobre Nosotros</a>
             </li>
             <li class="nav-item dropdown">
               <a
-                class="nav-link dropdown-toggle"
+                class="nav-link dropdown-toggle fs-5"
                 href="#"
                 role="button"
                 data-bs-toggle="dropdown"
@@ -57,7 +57,7 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Contacto</a>
+              <a class="nav-link fs-5" href="#">Contacto</a>
             </li>
           </ul>
           <form class="d-flex" role="search">
@@ -101,9 +101,9 @@
     
 
     <!--Cards -->
-     <div class="container p-5">
+     <div class="container-fluid p-5" style="background-color: #00264d;" >
       <div class="row pt-5">
-        <h1 class="text-center pb-5">Cuidades</h1>
+        <h1 class="text-center text-white">Cuidades</h1>
 
 
 
@@ -152,18 +152,22 @@
 
 
      <!--Formulario -->
-     <div class="container p-5 w-100" >
-      <h3><b>Formulario de Contacto</b></h3>
+     <div class="container p-5" >
+      <div class="row text-white">
+        <h3><b>Formulario de Contacto</b> </h3>
+
+      </div>
+      
       <form class="mt-3">
         <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
+          <label for="exampleInputEmail1" class="form-label text-white">Correo electrónico</label>
           <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-          <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico con nadie más.</div>
+          <div id="emailHelp" class="form-text text-light">Nunca compartiremos su correo electrónico con nadie más.</div>
         </div>
 
         
         <div class="mb-3">
-          <label for="consultaId" class="form-label">Consulta</label>
+          <label for="consultaId" class="form-label text-white">Consulta</label>
           <textarea class="form-control" name="" id="consultaId" cols="30" rows="10" placeholder="Escriba su comentario"></textarea>
         </div>
 
@@ -181,7 +185,7 @@
 
         <div class="mb-3 form-check">
           <input type="checkbox"  class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1">Verificado</label>
+          <label class="form-check-label text-white" for="exampleCheck1">Verificado</label>
         </div>
         <button type="submit" class="btn btn-primary">Enviar</button>
       </form>
