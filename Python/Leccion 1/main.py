@@ -1,42 +1,51 @@
+'''
 # Giuliana Diaz Luna
 # Clase 1
 print("Hola Mundo")
 # Clase 2:
-miVariable = 3
+miVariable = 3  # se asigna el tipo de dato
 print(miVariable)
+# Reutilizacion de variable (dinamica)
 miVariable = "Hola a todos"
-print(miVariable)
+print(miVariable)  # print es una funcion porque permite ejecutar el codigo para imprimir datos
 miVariable = 3.5
 print(miVariable)
+
+# Direccion de memoria
 x = 10
 y = 2
 z = x + y
-print(id(x))
-# Las literales se escriben x528, la variable y = x272, la variable z = x592
+print(z)
+print(id(x))  # la funcion id es para que nos muestre la direccion de la casilla de memoria de la variable x
+# Las literales se escriben asi: x528, la variable y = x272, la variable z = x592 (son referencias de memoria)
 print(id(y))
 print(id(z))
 
-#Clase 3: Tipos de datos
+# Clase 3: Los Tipos de datos son clases
+abc: str = "Hola mundo"  # es referencia pero no dice que la variable abc es string
 a = 10
-print(type(a))
+print(type(a))  # type es un funcion que nos muestra el tipo de dato, nos muestra que la clase es de tipo int
 b = 10.98
-print(type(b))
-#c = true
-#print(type(c))
+print(type(b))  # tipo flotante
+c = True  # tipo booleano
+print(type(c))
 d = "Hola Profe"
 print(type(d))
 
-# Manejo de cadenas (string)
-miArtistaFavorito = "Harry Styles"
+# Manejo de cadenas (string) Ejercio
+miArtistaFavorito = "Harry Styles: "
 caracteristicas = "El mejor cantante"
-print("Mi artista favorito es: "+miArtistaFavorito,caracteristicas)
+print("Mi artista favorito es:", miArtistaFavorito, caracteristicas)  # asigna espacios automaticamente
+print("Mi artista favorito es: " + miArtistaFavorito + " " + caracteristicas)
 
-numero1 = "8"
+numero1 = "10"
 numero2 = "5"
-print(numero1+numero2)
-print(int(numero1)+int(numero2))
+print(numero1 + numero2)  # concatena la cadena
+print(int(numero1) + int(numero2))  # convierte el string a entero
 
-# Tipos booleanos
+# Tipos booleanos(bool)
+miBooleano = True
+miBooleano = False
 miBooleano = 3 > 2
 print(miBooleano)
 
@@ -45,69 +54,95 @@ if miBooleano:
 else:
     print("Resultado falso")
 
-# Procesar la entrada de usuario(input), funcion
-resultado= input ("Digite un numero: ")
-print(resultado)
+# Procesar la entrada de usuario(input), funcion input (regresa un dato tipo string)
+#resultado = input("Digite un numero: ")
+#print(resultado)
+
 # Conversion de la entrada de datos
 num1 = int(input("Escribe el primer numero:"))
 num2 = int(input("Escribe el segundo numero:"))
-resultado= num1 + num2
-print("El resultado de la suma es: ",resultado)
+resultado = num1 + num2
+print("El resultado de la suma es: ", resultado)
 
-#Clase 4: Operadores aritmeticos
+# Ejercicio:
+titulo = input("Proporciona el nombre del libro: ")
+autor = input("Proporciona el autor del libro: ")
+print(titulo, "fue escrito por:", autor)
+
+
+# Clase 4: Operadores aritmeticos
 operandoA = 8
 operandoB = 5
+
 suma = operandoA + operandoB
-print(f"El resultado de la suma es: {suma}")
+print("El resultado de la suma es:", suma)
+print(f"El resultado de la suma es: {suma}") # interpolacion: incluye la variable dentro del mensaje
+
 resta = operandoA - operandoB
 print(f"El resultado de la resta es: {resta}")
+
 multiplicacion = operandoA * operandoB
-print((f"El resultado de la operacion es: {multiplicacion}"))
+print(f"El resultado de la multiplicacion es: {multiplicacion}")
+
 division = operandoA / operandoB
-print(f"El resultado de la division es: {division}")
+print(f"El resultado de la division es: {division}") # nos devuelve un resultado flotante
 division = operandoA // operandoB
-print(f"El resulado entero de la division es: {division}")
+print(f"El resulado entero de la division es: {division}") # nos devuelve el numero entero
+
 modulo = operandoA % operandoB
-print(f"El resulado de la division o modulo es: {modulo}")
+print(f"El modulo o residuo es: {modulo}")
+
 exponente = operandoA ** operandoB
 print(f"El resultado del exponente es: {exponente}")
 
-# Ejercicio rectangulo
+# Ejercicio rectangulo: calcular el area y el perimetro de un rectangulo
 alto = int(input("Ingrese el alto del rectangulo:"))
 ancho = int(input("Ingrese el ancho del rectangulo:"))
 area = alto * ancho
-perimetro = (alto + ancho) * 2
-print("El area del rectangulo es:",area, "y el perimetro es:",perimetro)
+perimetro = (alto + ancho) * 2   # darle prioridad primero a la suma con parentesis
+print("El area del rectangulo es:", area, "y el perimetro es:", perimetro)
 
-
+# Operadores de asignacion y comparación
 miVariable = 10
-print(miVariable)
+print(miVariable) # imprime 10
 
 # Operadores de reasignacion
 miVariable = miVariable + 1
-print(miVariable)
+print(miVariable) # imprime 11
 
+# Incremento con reasignacion
 miVariable += 1
-print(miVariable)
+print(miVariable) # imprime 12
 
 # miVariable = miVariable - 2
 miVariable -= 2
-print(miVariable)
+print(miVariable) # al 12 le resta 2 e imprime 10
 
 # miVarible = miVariable * 3
 miVariable *= 3
-print(miVariable)
+print(miVariable) # imprime 30
 
 # miVariable = miVariable / 2
 miVariable /= 2
-print(miVariable)
+print(miVariable) # imprime 15.0 como flotante
+
+# Concatenacion
+palabra1 = 'Ho'
+palabra2 = 'la'
+resultado = palabra1 + palabra2
+print(resultado)
+
+# Repeticion
+palabra3 = 'Hola'
+resultado = palabra3 * 4
+print(resultado)
 
 # Operadores de comparacion
 
 d = 5
 b = 2
-resultado = d == b # comprobamos si son iguales
-print(resultado)
+resultado = d == b  # comprobamos si son iguales
+print(resultado)    # imprime False
 
 # Operador diferente
 resultado = d != b
@@ -129,13 +164,13 @@ print(resultado)
 resultado = d >= b
 print(resultado)
 
-# Ejercicio par o impar
+# Ejercicio numero par o impar
 numero = int(input("Ingrese un numero: "))
-print(f"El residuo de la division es {numero % 2}")
+print(f"El residuo de la division es: {numero % 2}")
 if numero % 2 == 0:
-    print(f"El numero {numero} es par")
+    print(f"El numero {numero} es PAR")
 else:
-    print(f"El numero {numero} es impar")
+    print(f"El numero {numero} es IMPAR")
 
 # Ejercicio: Es mayor de edad?
 edad = int(input("Ingrese su edad: "))
@@ -152,18 +187,19 @@ if edadPersona >= edadAdulta:
 else:
     print(f"Su edad es de {edadPersona} años, usted es menor de edad")
 
-# Clase 5: Operadores parte 2
-# Operador and
+# Clase 5: Operadores logicos
+
+# Operador and (binario)
 a = False
 b = False
 resultado = a and b
 print(resultado)
 
-# Operador or
+# Operador or (binario)
 resultado = a or b
 print(resultado)
 
-# Operador not
+# Operador not (unario)
 resultado = not a
 print(resultado)
 
@@ -175,7 +211,7 @@ else:
     print(f"El numero {numero} se encuentra fuera del rango 0-5")
 
 # Para el profe es:
-valor = int(input("Ingrese un valor: "))
+valor = int(input("Ingrese un numero dentro del rango 0 al 5: "))
 valorMinimo = 0
 valorMaximo = 5
 dentroRango = valor >= valorMinimo and valor <= valorMaximo
@@ -193,34 +229,42 @@ else:
 
 
 # Ejercicio con el operador or, not
-vacaciones = False
+# Preguntar si un padre puede asistir al juego de su hijo
+# Verificamos si tiene vacaciones
+# verificamos si tiene dia libre
+vacaciones = True
 diaDescanso = False
-if not (vacaciones or diaDescanso):
+# operador or
+if vacaciones or diaDescanso:
+    print("Puede asistir al juego")
+else:
+    print("No puede asistir al juego")
+# operador not
+if not(vacaciones or diaDescanso):
     print("No puede asistir al juego")
 else:
-    print("Puede asistir al juego")
+    print("Puede asistir al juego")'''
 
-# Ejercicio rango entre 20 y 30 años
+
+# Ejercicio rango entre 20 y 30 años con los operadores and y or
 edad = int(input("Ingrese su edad: "))
 if 20 <= edad <= 30:
-    print("Su edad esta entre los 20 y los 30 años")
+    print(f"Su edad ingresada:{edad} esta entre los 20 y los 30 años")
 else:
-    print("Su edad no esta entre los 20 y los 30 años")
+    print(f"Su edad ingresada:{edad} no esta entre los 20 y los 30 años")
 
-# Para el profe:
+# Con el operador and
 edad = int(input("Ingrese su edad: "))
 veinte = edad >= 20 and edad < 30
 print(veinte)
 treinta = edad >= 30 and edad < 40
 print(treinta)
-if veinte:
-    print("Estas dentro del rango los (20'0) años")
-elif treinta:
-    print("Estas dentro del rango los (30'0) años")
+if veinte or treinta:
+    print('Estas dentro del rango los (20\'0) a (30\'0) años')
 else:
     print("No estas dentro del rango de los (20'0) a (30'0) años")
 
-# sintaxis resumida
+# con el operador or
 edad = int(input("Ingrese su edad: "))
 if (20 <= edad < 30) or (30 <= edad < 40):
     print("Estas dentro del rango los (20'0) a (30'0) años")
@@ -255,7 +299,6 @@ print(f"""
     Costo de envio: {envio}
 
 """)
-
 
 # Ejercicio tienda de libros - Para el profe:
 print("Digite los siguientes datos del libro")
