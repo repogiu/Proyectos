@@ -13,7 +13,7 @@ una asginacion de estilo por medio de la clase seria asi: (un punto al principio
 
 y se debe asignar a un elemento ej. <div class="texto_grande">
 
-**********************
+************************************************
 una asignacion de estilo por medio del elemento html natural
         div {
             font-family: 'Lato', sans-serif;
@@ -71,21 +71,16 @@ una asignacion por medio de numeral #, le asignaria el estilo al elemento que te
             abrir ventana de aviso
         </button>
 
-
-
-
+        <!-- Button rojo -->
 
         <div class="mb-3">
             <label for="txtNombre" class="form-label">Nombre: </label>
             <input type="text" class="form-control" id="txtNombre" placeholder="captura tu nombre">
         </div>
 
-        <button id="" type="button" onclick="muestraAlerta()" onmouseover="" class="btn btn-danger">muestra una alerta de javascript</button>
+        <button id="btnPrincipal" type="button" onclick="muestraAlerta()" onmouseover="" class="btn btn-danger">muestra una alerta de javascript</button>
 
         <hr>
-
-
-
 
 
         <!-- Modal -->
@@ -107,21 +102,19 @@ una asignacion por medio de numeral #, le asignaria el estilo al elemento que te
             </div>
         </div>
 
-
+        <!-- Tabla de multiplicar en tarjetas -->
 
         <?php
         $tablaInicial = 1;
-        $tablaFinal = 9;
+        $tablaFinal = 10;
         for ($tabla = $tablaInicial; $tabla <= $tablaFinal; $tabla++) {
         ?>
-
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
                     <h5 class="card-title"> <?php echo "Tabla del " . $tabla . "<br>" . "<br>";    ?> </h5>
                     <p class="card-text">
 
                         <?php
-                        //programa que calcula una tabla de multiplicar. Ilustra como manejar variables y como usar bucles
                         for ($i = 1; $i <= 10; $i++) {
                             $resultado = $i * $tabla;
                             echo $tabla . " * " . $i . " = " . $resultado . "<br>";
@@ -130,7 +123,7 @@ una asignacion por medio de numeral #, le asignaria el estilo al elemento que te
 
                     </p>
                     <a href="#" class="btn btn-primary">Go somewhere</a>
-                    <a href="http://www.google.com" class="btn btn-success">ir a google</a>
+                    <a href="http://www.google.com" class="btn btn-success">Ir a Google</a>
                 </div>
             </div>
 
@@ -156,11 +149,13 @@ una asignacion por medio de numeral #, le asignaria el estilo al elemento que te
             var nombreTecleado = 0;
 
             // tambien podemos obtener elementos una vez, y usarlos varias veces
-            // osea guardamos el eklemento completo en una variable
+            // osea guardamos el elemento completo en una variable
             var inputNombre = document.getElementById("txtNombre");
+
 
             // leemos lo que teclearon en txtNombre
             nombreTecleado = Number.parseInt(inputNombre.value) + 15;
+            nombreTecleado = inputNombre.value;
 
             alert("Buena Clase " + nombreTecleado)
         }
