@@ -243,12 +243,13 @@ else:
 if not(vacaciones or diaDescanso):
     print("No puede asistir al juego")
 else:
-    print("Puede asistir al juego")'''
+    print("Puede asistir al juego")
 
 
 # Ejercicio rango entre 20 y 30 años con los operadores and y or
 edad = int(input("Ingrese su edad: "))
-if 20 <= edad <= 30:
+if (20 <= edad <= 30):
+# if (20<= edad < 30) or (30 <= edad < 40): con el operador or
     print(f"Su edad ingresada:{edad} esta entre los 20 y los 30 años")
 else:
     print(f"Su edad ingresada:{edad} no esta entre los 20 y los 30 años")
@@ -256,11 +257,15 @@ else:
 # Con el operador and
 edad = int(input("Ingrese su edad: "))
 veinte = edad >= 20 and edad < 30
-print(veinte)
+print(veinte) # imprime true o false
 treinta = edad >= 30 and edad < 40
 print(treinta)
 if veinte or treinta:
     print('Estas dentro del rango los (20\'0) a (30\'0) años')
+#if veinte or treinta:
+#    print('Estas dentro del rango de los (20\'0)')
+#elif treinta:
+#   print('Estas dentro del rango de los (30\'0) años')
 else:
     print("No estas dentro del rango de los (20'0) a (30'0) años")
 
@@ -278,7 +283,7 @@ if num1 > num2:
     print(f"El numero mayor es: {num1}")
 else:
     print(f"El numero mayor es: {num2}")
-
+'''
 # Ejercicio: tienda de libros
 print("Digite los siguientes datos del libro")
 nombre = input("Ingrese el nombre del libro: ")
@@ -306,16 +311,18 @@ nombre = input("Ingrese el nombre del libro: ")
 id = int(input("Ingrese el ID del libro: "))
 precio = float(input("Ingrese el precio del libro: "))
 envioGratis = input("Indicar si el envio es gratuito (True/False): ")
+# para cambiar el tipo de dato string a booleano
 if envioGratis == "True":
     envioGratis = True
 elif envioGratis == "False":
     envioGratis = False
 else:
     print("El valor ingresado es incorrecto, debe escribir True/False")
-print(f"""
+# imprimir en varias lineas con format
+print(f'''
 
     Nombre: {nombre}
     ID: {id}
     Precio: {precio}
     Costo de envio: {envioGratis}
-""")
+''')

@@ -4,10 +4,12 @@
 
 package Ciclos01;
 
+import javax.swing.JOptionPane;
+
 public class Ejercicio01 {
     public static void main(String[] args) {
         int numero, cuadrado;
-        
+        // trabajamos con la clase JOptionPane (cuadro de dialogo) con el metodo shiwInputDialog
         numero = Integer.parseInt(JOptionPane.showInputDialog("Digite un número: "));
         while(numero >= 0){ // Mientras el número sea igual a cero o positivo
             cuadrado = (int)Math.pow(numero, 2);
@@ -17,4 +19,5 @@ public class Ejercicio01 {
         System.out.println("El programa a finalizado por numero negativo");
     }
     
+
 }
