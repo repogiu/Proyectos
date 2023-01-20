@@ -327,6 +327,10 @@ for llave, valor in seleccionArgentina.items():
 print('Tenemos cargados en el diccionario la cantidad de jugadores: ', end=' ')
 print(len(seleccionArgentina))
 
+# Seguimos mostrando como recorrer un diccionario con el ciclo for
+for i in seleccionArgentina:
+    print(f'{i} -> {seleccionArgentina[i]}')
+
 #####################################################################################
 # Metodo Pilas usando listas
 pila = [1, 2, 3]
@@ -371,6 +375,4 @@ seRetira = cola.pop(0)
 print(f'Atendido el cliente: {seRetira}')
 print(cola)
 
-# Seguimos mostrando como recorrer un diccionario con el ciclo for
-for i in seleccionArgentina:
-    print(f'{i} -> {seleccionArgentina[i]}')
+
