@@ -80,31 +80,38 @@ def listarNombres(*nombres): # Normalmente se utiliza: *args, cuando no sabemos 
 listarNombres('Lucas', 'José', 'Claudia', 'Rosa', 'María')
 listarNombres('Marcos', 'Daniel', 'Romina', 'Pepe', 'Marcela', 'Carlos')
 
+#########################################################
+# Funciones con diccionario
+
 def listarTerminos(**terminos): # Lo mas utilizado es **kwargs para recibir los argumentos
     for llave, valor in terminos.items(): # kwargs significa: key word argument
         print(f'{llave} : {valor}')
 
+# llamamos a la funcion
 listarTerminos() # No recibe nada, nada se va a mostrar
-listarTerminos(IDE='Integrated Develoment Enviroment', PK='Primary Key')
+listarTerminos(IDE='Integrated Development Enviroment', PK='Primary Key') # la llave no hace falta comillas simples
 listarTerminos(Nombre='Leonel Messi')
 
+# Lista de elementos con funciones (convertir)
 def desplegarNombres(nombres):
     for nombre in nombres:
         print(nombre)
 nombres2 = ['Tito', 'Pedro', 'Carlos']
 desplegarNombres(nombres2)
 desplegarNombres('Carla')
+
 # desplegarNombres(10, 11) # No es un objeto iterable
-desplegarNombres((10, 11)) # La convertimos a una tupla, en un solo elemento no olvidar la coma
+desplegarNombres((10, 11)) # La convertimos a una tupla con doble parentesis, en un solo elemento no olvidar la coma ((10,))
 desplegarNombres([22, 55]) # La convertimos en una lista
 
-# Funciones Recursivas
+# Funciones Recursivas con factorial ( necesita un caso base y un caso recursivo)
 def factorial(numero):
     if numero == 1: # Caso Base
         return 1
     else:
         return numero * factorial(numero-1) # Caso Recursivo
+# En codigo duro
 numeroFactorial = int(input('Digite el numero para calcular el factorial: '))
-resultado = factorial(numeroFactorial) # Lo hacemos en código duro
-print(f'El factorial del número {numeroFactorial} es: {resultado}') # Tarea que el usuario ingrese el número para calcular el factorial
+resultado = factorial(numeroFactorial)
+print(f'El factorial del número {numeroFactorial} es: {resultado}')
 
